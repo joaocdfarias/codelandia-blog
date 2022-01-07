@@ -5,24 +5,24 @@ import HeartIconFilled from '../../assets/heart-filled.svg'
 
 import './Card.css'
 
-export const Card = ({ data, click, setClick }: CardProps) => {
+export const Card = ({ date, title, content }: CardProps) => {
+  const [click, setClick] = React.useState(false)
+
+  const handleClick = () => {
+    setClick(!click)
+  }
+
   return (
-    <>
-      {data.map((item, id) => {
-        return (
-          <div className="card" key={id}>
-            <p className="date"> {item.date} </p>
-            <h3 className="title"> {item.title} </h3>
-            <p className="content"> {item.content} </p>
-            <img
-              onClick={setClick}
-              className="heart"
-              src={!click ? HeartIcon : HeartIconFilled}
-              alt="Heart Icon"
-            />
-          </div>
-        )
-      })}
-    </>
+    <div className="card">
+      <p className="date"> {date} </p>
+      <h3 className="title"> {title} </h3>
+      <p className="content"> {content} </p>
+      <img
+        onClick={handleClick}
+        className="heart"
+        src={!click ? HeartIcon : HeartIconFilled}
+        alt="Heart Icon"
+      />
+    </div>
   )
 }
