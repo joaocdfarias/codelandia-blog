@@ -1,0 +1,55 @@
+header {
+  background: linear-gradient(88.27deg, #574ae8 0%, #3ea1db 100%);
+}
+.wrapper {
+  padding: 48px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.blog {
+  font-size: 24px;
+}
+
+input {
+  all: unset;
+  margin-top: 74px;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  padding: 24px 24px 24px 72px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  background-image: url(../../assets/search.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 24px;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 360px) {
+  .wrapper {
+    padding: 48px 24px;
+  }
+
+  input {
+    padding: 16px 16px 16px 56px;
+    background-position-x: 16px;
+  }
+}

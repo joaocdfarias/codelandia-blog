@@ -1,0 +1,6 @@
+.card-wrapper {
+  margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
