@@ -4,3 +4,10 @@
   flex-direction: column;
   gap: 56px;
 }
+
+@media (max-width: 360px) {
+  .card-wrapper {
+    margin-top: 56px;
+    padding: 24px;
+  }
+}
