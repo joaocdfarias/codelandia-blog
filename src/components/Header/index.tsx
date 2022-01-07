@@ -3,6 +3,14 @@ import './Header.css'
 import '../../style/Container.css'
 
 export const Header = () => {
+  const [search, setSearch] = React.useState('')
+
+  const handleSearch = (event: any) => {
+    setSearch(event.target.value)
+  }
+
+  console.log(search)
+
   return (
     <header>
       <div className="container wrapper">
@@ -14,7 +22,11 @@ export const Header = () => {
             blog
           </a>
         </nav>
-        <input placeholder="Pesquisar no blog" type="search" />
+        <input
+          onChange={handleSearch}
+          placeholder="Pesquisar no blog"
+          type="search"
+        />
       </div>
     </header>
   )
