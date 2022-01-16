@@ -1,15 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { SearchContext } from '../../contexts/SearchContext'
 import './Header.css'
 import '../../style/Container.css'
 
 export const Header = () => {
-  const [search, setSearch] = React.useState('')
-
-  const handleSearch = (event: any) => {
-    setSearch(event.target.value)
-  }
-
-  console.log(search)
+  const { handleSearch } = useContext(SearchContext)
 
   return (
     <header>
@@ -26,6 +21,7 @@ export const Header = () => {
           onChange={handleSearch}
           placeholder="Pesquisar no blog"
           type="search"
+          role="search"
         />
       </div>
     </header>
